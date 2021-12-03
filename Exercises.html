@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //----------------------------------Excercises on page 39 of eloquent javascript;
+       // https://eloquentjavascript.net/code/#2---*******************************solutions**
+
+        /*
+for(let num = "A"; num.length < 8; num+="A"){
+    console.log(num);
+}
+
+for(let num = 1; num <= 100; num++){
+    if(num % 3 == 0 && num % 5 == 0){
+        console.log('fizzbuzz');
+    }else if(num % 3 == 0){
+        console.log('fizz');
+    }else if(num % 5 == 0){
+        console.log('buzz')
+    }else{
+        console.log(num)
+    }
+}
+
+let size = 16;
+let board = "";
+for(let y = 0; y < size; y++){
+ for(let x = 0; x < size; x++){
+     if((x + y) % 2 == 0){
+         board += " ";
+     }else{
+         board += "#";
+     }
+ }
+ board += "\n";
+}
+console.log(board);
+
+//--------------------------Exercises on pg 69
+function min(x , y){
+    if(x < y){
+        return x;
+    }else{
+        return y;
+    }
+}console.log(min(8,4));
+
+  var n = prompt('Enter any number!!');
+  function calNum(n){
+   if(n == 0){
+       return true;
+   }else if(n == 1){
+  return false;
+   }else if(n < 0){
+       return calNum(-n);
+   }else {
+       return calNum(n-2);
+   }
+  }console.log(calNum(n));*/ 
+
+
+// function countChar(text, chr){
+//    let counted = 0;
+//    let sameLaeeters = [];
+//      for(let i = 0; i < text.length; i++){
+       
+//        if(text[i] == chr){
+           
+//            sameLaeeters.push(text[i])
+//        };
+//        counted++;
+//    }return sameLaeeters;
+// }
+// function countBs(text,chr){
+//    return countChar(text, chr).length;
+// }
+// console.log(countBs('FAFole', 'F'));
+// console.log(countChar('FAFoFe','F'));
+
+
+function countChar(string,ch){
+    let count = 0;
+    for(let i = 0; i < string.length; i++){
+        if(string[i] == ch){
+            count += 1;
+        }
+    }return count;
+}
+function countBs(string){
+  return countChar(string, 'B');
+}
+
+console.log(countBs('BBB'));
+console.log(countChar('FaFoFe', 'F'));
+
+
+
+//--------------------------------pg 94 
+// function range(start, end , step){
+// let array = [];
+// let number = start;
+// if( step > 0){
+//     for(; number < end; number += step){
+//         array.push(number);
+//     }
+// }
+// if(step < 0){
+//     for(; number > end; number += step){
+//         array.push(number);
+//     }
+// }
+
+
+// return array;
+// }
+
+// function sum(array){
+//     let total = 0;
+//     for(let value of array){
+//         total += value;
+//     }return total;
+// }
+// console.log(range(10,1,-1));
+//console.log(sum(range(1,10)));
+
+
+   function reverseArray(array){
+  array = ['e', 'r', 't', 'y', 'u', 'p'];
+    let newArray = [];
+       for(let i = array.length - 1; i >= 0; i--){
+        x  = array[i];  
+        newArray.push(x);
+       }return newArray;
+   }
+    console.log(reverseArray());
+
+function arrayInPlace(array){
+  for(let i = 0; i < Math.floor(array.length / 2); i++){
+  let old = array[i]; //stores the index at old
+  array[i] = array[array.length - 1- i]; // the postion is to start from 0
+  array[array.length - 1 - i] = old;// the position is to start from end
+  }return array;
+}
+console.log(arrayInPlace([1,2,3,4,5,6,7,]));
+
+function arrayToList(array){
+let list = null ;
+for(let i = 0; i < array.length; i++){
+    list = {value : array[i], rest : list };
+}return list
+
+
+}
+        console.log(arrayToList([1, 2, 3, 4, 5, 6]));
+
+  
+function listToArray(list){
+    let array = [];
+    for(let i = list;i;i = list.rest){
+        array.push(list.value);
+    }return array;
+}
+    console.log(listToArray(arrayToList([1,2,6])));
+
+
+</script>
+</body>
+</html>

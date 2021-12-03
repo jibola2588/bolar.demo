@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function factorial(n){
+            if(n == 0){
+                return 1
+            }else{
+                return (n-1) * 8;
+            }
+        }console.log(factorial(8));
+        var solve = 'the half of 100 is ${100/2}';
+      console.log(solve);
+      console.log(true ? 3:2);
+      console.log(false ? 1:5);
+      console.log("user" || "come");
+      console.log("come" || null);
+      var x = '2' + 2;
+      var y = 8 + '';
+      var a = 0 - '6';
+      var b = 6 * '5';
+      console.log(x,y,a,b);
+      let thenumber = prompt('pick a number');
+      console.log('the number is the squareroot of :'  + thenumber * thenumber);
+
+   let number = 1;
+   let time = 0;
+   while(time < 10){
+       number = number * 2;
+       time = time + 1;
+   }
+   console.log(number);
+
+  let name;
+  do{
+      name = prompt('who are you');
+      console.log(name);
+  }while(!name);
+  
+ if(false == true){
+     console.log('you are right');
+     if(1 < 2){
+         console.log('you make sense')
+     }
+ }
+let number = 1;
+for(let time = 0; time <10 ; time = time + 1){
+    number = number * 2;
+}console.log(number);
+
+for(let number = 20; number = number + 1;){
+    if(number % 7 == 0){
+        console.log(number);
+        break;
+    }
+}
+
+switch(prompt('what is your age')){
+    case"a5":
+    console.log('you are a child');
+    break;
+    case"10":
+    console.log('you are boy or girl');
+    break;
+    case"15":
+    console.log('you are a teenage');
+    break;
+    case"30":
+    console.log('you are a youth');
+    default:
+        console.log('You are a adult');
+}
+ var giveaway = function(base,take){
+     let result = 1;
+     for(let count = 0; count < take; count += 1){
+         result *= base;
+     }
+  return result;
+ }
+ console.log(giveaway(2,10));
+
+ var greet = (x,y) =>{
+     c = x + y;
+     return c;
+ }
+ console.log(greet(2,4)); 
+
+ function greet(who){
+     console.log('helo' + who);
+ }greet('jb');
+ console.log('bae')
+
+ // mathematical works pg 53
+function find(target){
+    function solve(current,history){
+        if(current == target){
+            return history;
+        }else if(current > target){
+            return null;
+        }else{
+            return solve(current + 5,`(${history} + 5)`) ||
+                    solve(current * 3,`(${history} * 3)`)
+        }
+    } 
+    return solve(1 , `1`);
+}
+console.log(find(24));
+
+//pg 54
+function farmAnimals(cows , pigs){
+    let cowString = String(cows);
+    while(cowString.length < 3){
+        cowString = "0" + cowString;
+        } console.log(`${cowString} cows`);
+
+        let pigString = String(pigs);
+        while(pigString.length < 3){
+            pigString = "0" + pigString;
+            console.log(`${pigString} pigs`);
+        }
+}farmAnimals(7 , 11);
+
+function animalFarmLabel(number , label){
+let numberString = String(number);
+while(numberString.length < 3){
+    numberString = "0" + numberString;
+}console.log(`${numberString} ${label}`);
+}
+ function animalFarm(cows , pigs , sheeps){
+     animalFarmLabel(cows, 'cows');
+     animalFarmLabel(pigs, "pigs");
+     animalFarmLabel(sheeps, `sheeps`);
+ } 
+ animalFarm(19 , 80 , 162);
+
+ function pountryFarm(number , width){
+     let numberString = String(number);
+     while(numberString.length < width){
+         numberString = "0" + numberString;
+     }
+     return numberString;
+ }
+ function pountryTins(growers , layers, broilers){
+ console.log(`${pountryFarm(layers , 3)} layers`);
+ console.log(`${pountryFarm(growers , 3)} growers`);
+ console.log(`${pountryFarm(broilers , 3)} broilers`);
+ }
+ pountryTins(2 , 5 , 7);*
+
+var str = 'thosw that want "some" peopl dead and they have to kill them';
+var result =str.search('kill');
+console.log(result);
+
+
+var journal = [
+    {events :['climbed tree','washed clothes','play ball'],
+     squirrel:false},
+     {events:['went to work','slept his room','touched wall'],
+     squirrel : false},
+     {
+        events: ['climbed tree', 'played video games', 'went out'],
+        squirrel: true
+    }
+
+]
+console.log(journal[2].events[2]);
+
+const num = {
+    visitors : 0,
+    hours : 0
+};
+num.hours = 1;
+//num = {visitors:1,hours :1}; this doesn't work.
+console.log(num);
+
+let journal = [];
+
+function addentry(events,squirrel){
+    journal.push(events, squirrel);
+};
+ addentry(['climbed tree','washed clothes','played ball'],false);
+ addentry(['went out','read books','played games'],false);
+ addentry(['touched color','danced well','cooked food'],true);
+
+console.log(journal[0]);
+
+function cal(table){
+    return (table[3]*table[0] - table[2]*table[1]) / 
+    Math.sqrt((table[3] + table[2])*
+             (table[0] + table[1]) *
+             (table[0] + table[2]) *
+             (table[1] + table[3]) )
+}console.log(cal([76,9,4,1]));
+var x = 5;
+var y = 5;
+if( !x == y){
+    console.log('x equal to y');
+}else{
+    console.log('x  not equal to y');
+}
+
+function cal(array,index){
+    return array.slice(2,index).
+    concat(array.slice(index + 1));
+};
+console.log(cal([2,3,4,5,6,5,6,7],3));
+
+function max(...numbers){
+    let result = -Infinity;
+    for(let number of numbers){
+        if(number > result){
+            result = number; 
+        }
+    }return result;
+}
+console.log(max(4,5,-1,9));
+
+function zeroPad(number,label){
+    let numberString = String(number);
+    while(numberString.length < 3){
+        numberString = "0" + numberString;
+    }
+    console.log(numberString , label);
+}
+  function printOut(cows,sheeps,pigs){
+      zeroPad(cows , 'cows');
+      zeroPad(sheeps , 'sheeps');
+      zeroPad(pigs , 'pigs');
+  }
+  printOut(9,7,9);
+
+  function even(n){
+      if(n == 0) return true;
+     else if( n == 1) return false;
+     else if (n < 0) return even(n);
+     else return even(n - 2);
+  }
+  console.log(even(10));*
+
+function countChar(String , ch){
+      let result = 0;
+    for(let count = 0; count < String.length ; count++){
+    if(String[count] == ch){
+        result += 1;
+    }
+    }return result;
+}
+
+  function countBs(String){
+      return countChar(String , 'B');
+  }
+
+  console.log(countBs('BBC'));
+  console.log(countChar('KIKKIKLE', 'K'));
+  
+  var str = "please return the stolen goods";
+  console.log(str.indexOf('good'));
+
+
+      function tableFor(event,journal){
+            
+        let table = [0,0,0,0];
+      
+      for(let i = 0; i < journal.length; i++) 
+       {
+                let entry = journal[i];
+                let index = 0;
+               if(entry.events.includes(event))
+                {
+                    index += 1;
+                }
+               if(entry.squirrel)
+                {
+                  index += 2;
+                }
+        table[index] += 1;
+    } 
+     return table;
+  }
+    console.log(tableFor("pizza",journal));
+
+    function max(...numbers){
+        let result = -Infinity;
+        for(let number of numbers){
+            if(number > result){
+                result = number;
+            }
+        }return result;
+    }
+console.log(max(-5,-3,-9,-1,-2));
+function randomPointOnCircle(radius){
+let angle = Math.floor(Math.random() * 2 * Math.PI);
+
+return { X : radius * Math.cos(angle),
+        Y:radius * Math.sin(angle)
+}
+}console.log(randomPointOnCircle(2));
+
+
+function phi([n11,n01,n10,n11]){
+    return (n11 * n00 - n10 * n01) / 
+    Math.sqrt((n10 + n11) * (n00 + n01)
+             *(n01 + n11) *(n00 + n10));
+}
+console.log(phi([76,4,9,1]));*/
+</script>
+
+</body>
+</html>
